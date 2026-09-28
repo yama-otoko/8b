@@ -1,4 +1,4 @@
-import { ArrowDownRight, ArrowUpRight, Boxes, Braces, Cpu, Layers3 } from "lucide-react";
+import { ArrowDownRight, ArrowUpRight, Braces, Cpu, Layers3 } from "lucide-react";
 
 function EightbitsMark({ compact = false }: { compact?: boolean }) {
   return (
@@ -17,10 +17,31 @@ function EightbitsMark({ compact = false }: { compact?: boolean }) {
   );
 }
 
+function TaskwishLogo() {
+  return (
+    <div className="taskwish-logo" aria-label="TaskWish">
+      <svg viewBox="0 0 50 19" aria-hidden="true">
+        <path d="M25.142 3.414 9.091 19 0 10.172l3.516-3.413 5.575 5.413L21.626 0l3.516 3.414Z" />
+        <path className="taskwish-logo-fade" d="M33.949 19 50 3.414 46.484 0 33.95 12.172l-5.575-5.413-3.516 3.413L33.95 19Z" />
+      </svg>
+      <span>TaskWish</span>
+    </div>
+  );
+}
+
+function BoriaLogo() {
+  return (
+    <div className="boria-logo" aria-label="Boria">
+      <span className="boria-mark" aria-hidden="true"><i /><i /><i /></span>
+      <span>BORIA</span>
+    </div>
+  );
+}
+
 const services = [
-  { number: "01", icon: Layers3, title: "Digital modernization", text: "We translate complex operational requirements into secure, accessible, and maintainable digital services.", tags: ["Discovery", "Service design", "Technical planning"] },
-  { number: "02", icon: Braces, title: "Software engineering", text: "We design and deliver dependable web platforms, internal tools, and cloud-ready systems built for long-term use.", tags: ["Web platforms", "Integrations", "Infrastructure"] },
-  { number: "03", icon: Cpu, title: "AI & automation", text: "We apply AI to real workflows with human oversight, clear system boundaries, and measurable operational value.", tags: ["Agent systems", "Workflow automation", "AI interfaces"] },
+  { number: "01", icon: Cpu, title: "Intelligent automation", text: "We turn repetitive, high-friction workflows into dependable automated systems—with clear controls, human oversight, and measurable outcomes.", tags: ["Workflow discovery", "Agent systems", "Human oversight"] },
+  { number: "02", icon: Braces, title: "Software engineering", text: "We build the platforms, integrations, and internal tools that make automation reliable, secure, and maintainable.", tags: ["Web platforms", "Integrations", "Infrastructure"] },
+  { number: "03", icon: Layers3, title: "Digital modernization", text: "We prepare legacy processes and services for automation through practical redesign, accessible interfaces, and sound technical planning.", tags: ["Service design", "Process redesign", "Technical planning"] },
 ];
 
 export default function Home() {
@@ -28,42 +49,42 @@ export default function Home() {
     <main>
       <header className="site-header shell">
         <a className="logo-link" href="#top" aria-label="Eightbits home"><EightbitsMark /></a>
-        <nav aria-label="Main navigation"><a href="#services">Services</a><a href="#products">Products</a><a href="#studio">Studio</a></nav>
+        <nav aria-label="Main navigation"><a href="#services">Services</a><a href="#products">Products</a><a href="#approach">Approach</a></nav>
         <a className="header-cta" href="mailto:hello@eightbits.us">Let&apos;s talk <ArrowUpRight size={16} /></a>
       </header>
 
       <section className="hero shell" id="top">
         <div className="hero-orbit" aria-hidden="true"><span className="orbit orbit-one" /><span className="orbit orbit-two" /><span className="orbit-dot dot-one" /><span className="orbit-dot dot-two" /><span className="orbit-core"><EightbitsMark compact /></span></div>
-        <div className="hero-kicker"><span>Software engineering · AI systems · Digital modernization</span><span>Prishtina · New York · Remote</span></div>
-        <h1>DIGITAL SYSTEMS<br /><em>FOR CRITICAL WORK.</em></h1>
-        <div className="hero-bottom"><p>Eightbits helps public-sector and enterprise teams turn complex requirements into dependable software, intelligent workflows, and clear digital services.</p><a href="#services" className="round-link" aria-label="Explore our capabilities"><ArrowDownRight size={28} /></a></div>
+        <div className="hero-kicker"><span>Intelligent automation · Software engineering · Digital modernization</span><span>Prishtina · New York · Remote</span></div>
+        <h1>AUTOMATION<br /><em>FOR CRITICAL WORK.</em></h1>
+        <div className="hero-bottom"><p>Eightbits helps public-sector and enterprise teams automate complex workflows—combining AI, dependable software, and human oversight.</p><a href="#services" className="round-link" aria-label="Explore our automation capabilities"><ArrowDownRight size={28} /></a></div>
       </section>
 
-      <div className="marquee" aria-label="Our capabilities"><div>STRATEGY <i /> DESIGN <i /> ENGINEERING <i /> AI SYSTEMS <i /> VENTURES <i /> STRATEGY <i /> DESIGN <i /> ENGINEERING <i /> AI SYSTEMS <i /> VENTURES</div></div>
+      <div className="marquee" aria-label="Our capabilities"><div>AUTOMATION <i /> AI SYSTEMS <i /> WORKFLOW DESIGN <i /> ENGINEERING <i /> INTEGRATION <i /> AUTOMATION <i /> AI SYSTEMS <i /> WORKFLOW DESIGN <i /> ENGINEERING <i /> INTEGRATION</div></div>
 
       <section className="services shell" id="services">
-        <div className="section-intro"><p className="section-label">/ Core capabilities</p><h2>From requirement<br />to reliable system.</h2><p>We work with mission owners and technical teams from early definition through delivery—reducing ambiguity, managing complexity, and building for continuity.</p></div>
+        <div className="section-intro"><p className="section-label">/ Automation practice</p><h2>From requirement<br />to reliable system.</h2><p>We focus on operational workflows where automation can reduce effort, improve consistency, and help teams make better decisions—without losing human control.</p></div>
         <div className="service-list">
-          {services.map(({ number, icon: Icon, title, text, tags }) => <article className="service-row" key={title}><span className="service-number">{number}</span><span className="service-icon"><Icon size={24} strokeWidth={1.5} /></span><div><h3>{title}</h3><p>{text}</p></div><ul>{tags.map((tag) => <li key={tag}>{tag}</li>)}</ul></article>)}
+          {services.map(({ number, icon: Icon, title, text, tags }) => <article className={`service-row${number === "01" ? " service-row-primary" : ""}`} key={title}><span className="service-number">{number}</span><span className="service-icon"><Icon size={24} strokeWidth={1.5} /></span><div><h3>{title}</h3><p>{text}</p></div><ul>{tags.map((tag) => <li key={tag}>{tag}</li>)}</ul></article>)}
         </div>
       </section>
 
       <section className="products" id="products"><div className="shell">
         <div className="products-heading"><p className="section-label">/ Applied innovation</p><h2>Technology proven<br />through practice.</h2><p>Our own products keep our team close to emerging technology, real operating constraints, and the discipline of shipping usable systems.</p></div>
         <article className="product-card taskwish-card">
-          <div className="product-copy"><div className="product-meta"><span>01 / Developer infrastructure</span><span>OPEN SOURCE</span></div><div className="taskwish-logo" aria-label="TaskWish"><span>✓✓</span> TaskWish</div><h3>The framework for building autonomous companies.</h3><p>Typed actors, tools, state, and AI workflows in TypeScript—designed to be discovered, called, and composed by other agents.</p><a href="https://taskwish.ai" target="_blank" rel="noreferrer">Visit TaskWish <ArrowUpRight size={17} /></a></div>
-          <div className="taskwish-visual" aria-hidden="true"><div className="code-top"><span /><span /><span /><b>company.ts</b></div><pre><span className="code-purple">company</span>(<span className="code-green">&quot;studio&quot;</span>, {'{'}{`\n  actors: [\n    `}<span className="code-blue">researcher</span>,{`\n    `}<span className="code-blue">builder</span>,{`\n    `}<span className="code-blue">reviewer</span>,{`\n  ],\n  state: `}<span className="code-purple">shared</span>(),{`\n`}{'}'});</pre><div className="flow"><span>Research</span><i>→</i><span>Build</span><i>→</i><span>Review</span></div></div>
+          <div className="product-copy"><div className="product-meta"><span>01 / Developer infrastructure</span><span>OPEN SOURCE</span></div><TaskwishLogo /><h3>The framework for building autonomous companies.</h3><p>Typed actors, tools, state, and AI workflows in TypeScript—designed to be discovered, called, and composed by other agents.</p><a href="https://taskwish.ai" target="_blank" rel="noreferrer">Visit TaskWish <ArrowUpRight size={17} /></a></div>
+          <div className="taskwish-visual" aria-hidden="true"><div className="code-top"><span /><span /><span /><b>company.ts</b></div><pre><span className="code-cyan-600">Company</span>(<span className="code-green">&quot;studio&quot;</span>, {'{'}{`\n  actors: [\n    `}<span className="code-blue">researcher</span>,{`\n    `}<span className="code-blue">builder</span>,{`\n    `}<span className="code-blue">reviewer</span>,{`\n  ],\n`}{'}'});</pre><div className="flow"><span>Research</span><i>→</i><span>Build</span><i>→</i><span>Review</span></div></div>
         </article>
         <article className="product-card boria-card">
           <div className="boria-visual" aria-hidden="true"><div className="radar-grid" /><span className="drone drone-one">◇</span><span className="drone drone-two">◇</span><span className="drone drone-three">◇</span><div className="radar-status"><span>LIVE MESH</span><b>128</b><small>ACTIVE NODES</small></div><div className="coordinates">NORTH RIDGE / ADRIATIC ARC<br />WIND 12 KT / MESH STABLE</div></div>
-          <div className="product-copy"><div className="product-meta"><span>02 / Autonomous hardware</span><span>EARLY ACCESS</span></div><div className="boria-logo"><Boxes size={27} /> BORIA</div><h3>Autonomous machines that think together.</h3><p>Mountain-born hardware and an open, peer-to-peer protocol for drone swarms that coordinate—even when the network breaks.</p><a href="https://boria.ai" target="_blank" rel="noreferrer">Explore Boria <ArrowUpRight size={17} /></a></div>
+          <div className="product-copy"><div className="product-meta"><span>02 / Autonomous hardware</span><span>EARLY ACCESS</span></div><BoriaLogo /><h3>Autonomous machines that think together.</h3><p>Mountain-born hardware and an open, peer-to-peer protocol for drone swarms that coordinate—even when the network breaks.</p><a href="https://boria.ai" target="_blank" rel="noreferrer">Explore Boria <ArrowUpRight size={17} /></a></div>
         </article>
       </div></section>
 
-      <section className="studio shell" id="studio"><p className="section-label">/ Why Eightbits</p><div className="studio-grid"><h2>A focused technical<br />delivery partner.</h2><div><p>Eightbits brings product judgment, design discipline, and engineering depth into one accountable team.</p><p>We communicate clearly, document decisions, work in measurable increments, and build systems that client teams can operate with confidence.</p></div><div className="studio-principles"><span><b>01</b>Clear scope and ownership</span><span><b>02</b>Accessible, durable systems</span><span><b>03</b>Transparent delivery</span></div></div></section>
+      <section className="studio shell" id="approach"><p className="section-label">/ How we work</p><div className="studio-grid"><h2>Automation with<br />accountability.</h2><div><p>Eightbits combines workflow analysis, product judgment, and engineering depth in one accountable team.</p><p>We start with the work itself, automate where it creates clear value, and keep people in control of consequential decisions.</p></div><div className="studio-principles"><span><b>01</b>Start with the workflow</span><span><b>02</b>Design for human control</span><span><b>03</b>Measure operational value</span></div></div></section>
 
       <section className="contact shell"><div><p className="section-label">/ Start a conversation</p><h2>TELL US THE<br /><em>MISSION.</em></h2></div><a href="mailto:hello@eightbits.us" className="contact-link">hello@eightbits.us <ArrowUpRight size={30} /></a></section>
-      <footer className="shell"><EightbitsMark /><p>Digital products, intelligent systems, and ventures.</p><div><a href="https://www.linkedin.com/company/eight-8-bits/" target="_blank" rel="noreferrer">LinkedIn</a><a href="#top">Back to top ↑</a></div></footer>
+      <footer className="shell"><EightbitsMark /><p>Intelligent automation for critical work.</p><div><a href="https://www.linkedin.com/company/eight-8-bits/" target="_blank" rel="noreferrer">LinkedIn</a><a href="#top">Back to top ↑</a></div></footer>
     </main>
   );
 }

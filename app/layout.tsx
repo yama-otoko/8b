@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Eightbits — Digital Product Studio",
+  title: "Eightbits — Intelligent Automation",
   description:
-    "Eightbits designs and engineers digital products, AI systems, and new ventures from zero to scale.",
+    "Eightbits designs and delivers reliable automation systems for public-sector and enterprise workflows.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
