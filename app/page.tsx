@@ -38,6 +38,15 @@ function BoriaLogo() {
   );
 }
 
+function SicaLogo() {
+  return (
+    <div className="sica-logo" aria-label="Sica">
+      <span className="sica-mark" aria-hidden="true">&gt;_</span>
+      <span>SICA</span>
+    </div>
+  );
+}
+
 const services = [
   { number: "01", icon: Cpu, title: "Intelligent automation", text: "We turn repetitive, high-friction workflows into dependable automated systems—with clear controls, human oversight, and measurable outcomes.", tags: ["Workflow discovery", "Agent systems", "Human oversight"] },
   { number: "02", icon: Braces, title: "Software engineering", text: "We build the platforms, integrations, and internal tools that make automation reliable, secure, and maintainable.", tags: ["Web platforms", "Integrations", "Infrastructure"] },
@@ -75,9 +84,24 @@ export default function Home() {
           <div className="product-copy"><div className="product-meta"><span>01 / Developer infrastructure</span><span>OPEN SOURCE</span></div><TaskwishLogo /><h3>The framework for building autonomous companies.</h3><p>Typed actors, tools, state, and AI workflows in TypeScript—designed to be discovered, called, and composed by other agents.</p><a href="https://taskwish.ai" target="_blank" rel="noreferrer">Visit TaskWish <ArrowUpRight size={17} /></a></div>
           <div className="taskwish-visual" aria-hidden="true"><div className="code-top"><span /><span /><span /><b>company.ts</b></div><pre><span className="code-cyan-600">Company</span>(<span className="code-green">&quot;studio&quot;</span>, {'{'}{`\n  actors: [\n    `}<span className="code-blue">researcher</span>,{`\n    `}<span className="code-blue">builder</span>,{`\n    `}<span className="code-blue">reviewer</span>,{`\n  ],\n`}{'}'});</pre><div className="flow"><span>Research</span><i>→</i><span>Build</span><i>→</i><span>Review</span></div></div>
         </article>
+        <article className="product-card sica-card">
+          <div className="product-copy"><div className="product-meta"><span>02 / Communication infrastructure</span><span>OPEN SOURCE</span></div><SicaLogo /><h3>Matrix messaging, built for the command line.</h3><p>A TypeScript CLI for rooms, messages, replies, read state, and BridgeV2 integrations—speaking directly to the Matrix API and ready for scripts and agents.</p><a href="https://www.npmjs.com/package/sica" target="_blank" rel="noreferrer">View Sica on npm <ArrowUpRight size={17} /></a></div>
+          <div className="sica-visual" aria-hidden="true">
+            <div className="terminal-top"><span /><span /><span /><b>SICA // MATRIX CLIENT</b></div>
+            <div className="terminal-lines">
+              <p><i>$</i> npm install -g sica</p>
+              <p><i>$</i> sica rooms --unread</p>
+              <p className="terminal-result"><span># operations</span><b>4 unread</b></p>
+              <p className="terminal-result"><span># product-lab</span><b>2 unread</b></p>
+              <p><i>$</i> sica send <span className="terminal-room">#operations</span> &quot;Deploy complete.&quot;</p>
+              <p className="terminal-success">✓ message sent</p>
+            </div>
+            <div className="sica-protocol"><span>MATRIX</span><i /> <span>BRIDGEV2</span><i /> <span>JSON</span></div>
+          </div>
+        </article>
         <article className="product-card boria-card">
           <div className="boria-visual" aria-hidden="true"><div className="radar-grid" /><span className="drone drone-one">◇</span><span className="drone drone-two">◇</span><span className="drone drone-three">◇</span><div className="radar-status"><span>LIVE MESH</span><b>128</b><small>ACTIVE NODES</small></div><div className="coordinates">NORTH RIDGE / ADRIATIC ARC<br />WIND 12 KT / MESH STABLE</div></div>
-          <div className="product-copy"><div className="product-meta"><span>02 / Autonomous hardware</span><span>EARLY ACCESS</span></div><BoriaLogo /><h3>Autonomous machines that think together.</h3><p>Mountain-born hardware and an open, peer-to-peer protocol for drone swarms that coordinate—even when the network breaks.</p><a href="https://boria.ai" target="_blank" rel="noreferrer">Explore Boria <ArrowUpRight size={17} /></a></div>
+          <div className="product-copy"><div className="product-meta"><span>03 / Autonomous hardware</span><span>EARLY ACCESS</span></div><BoriaLogo /><h3>Autonomous machines that think together.</h3><p>Mountain-born hardware and an open, peer-to-peer protocol for drone swarms that coordinate—even when the network breaks.</p><a href="https://boria.ai" target="_blank" rel="noreferrer">Explore Boria <ArrowUpRight size={17} /></a></div>
         </article>
       </div></section>
 
