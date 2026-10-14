@@ -1,4 +1,4 @@
-import { ArrowDownRight, ArrowUpRight, Braces, Cpu, Layers3 } from "lucide-react";
+import { ArrowDownRight, ArrowUpRight, Braces, Cpu, Layers3, MessagesSquare } from "lucide-react";
 
 function EightbitsMark({ compact = false }: { compact?: boolean }) {
   return (
@@ -48,9 +48,10 @@ function SicaLogo() {
 }
 
 const services = [
-  { number: "01", icon: Cpu, title: "Intelligent automation", text: "We turn repetitive, high-friction workflows into dependable automated systems—with clear controls, human oversight, and measurable outcomes.", tags: ["Workflow discovery", "Agent systems", "Human oversight"] },
-  { number: "02", icon: Braces, title: "Software engineering", text: "We build the platforms, integrations, and internal tools that make automation reliable, secure, and maintainable.", tags: ["Web platforms", "Integrations", "Infrastructure"] },
-  { number: "03", icon: Layers3, title: "Digital modernization", text: "We prepare legacy processes and services for automation through practical redesign, accessible interfaces, and sound technical planning.", tags: ["Service design", "Process redesign", "Technical planning"] },
+  { number: "01", primary: true, icon: MessagesSquare, title: "Software consulting", text: "We help teams turn complex business and technical challenges into clear, practical software strategies—with senior guidance from discovery through delivery.", tags: ["Technology strategy", "Solution architecture", "Delivery planning"] },
+  { number: "02", icon: Cpu, title: "Intelligent automation", text: "We turn repetitive, high-friction workflows into dependable automated systems—with clear controls, human oversight, and measurable outcomes.", tags: ["Workflow discovery", "Agent systems", "Human oversight"] },
+  { number: "03", icon: Braces, title: "Software engineering", text: "We build the platforms, integrations, and internal tools that make automation reliable, secure, and maintainable.", tags: ["Web platforms", "Integrations", "Infrastructure"] },
+  { number: "04", icon: Layers3, title: "Digital modernization", text: "We prepare legacy processes and services for automation through practical redesign, accessible interfaces, and sound technical planning.", tags: ["Service design", "Process redesign", "Technical planning"] },
 ];
 
 export default function Home() {
@@ -72,9 +73,9 @@ export default function Home() {
       <div className="marquee" aria-label="Our capabilities"><div>AUTOMATION <i /> AI SYSTEMS <i /> WORKFLOW DESIGN <i /> ENGINEERING <i /> INTEGRATION <i /> AUTOMATION <i /> AI SYSTEMS <i /> WORKFLOW DESIGN <i /> ENGINEERING <i /> INTEGRATION</div></div>
 
       <section className="services shell" id="services">
-        <div className="section-intro"><p className="section-label">/ Automation practice</p><h2>From requirement<br />to reliable system.</h2><p>We focus on operational workflows where automation can reduce effort, improve consistency, and help teams make better decisions—without losing human control.</p></div>
+        <div className="section-intro"><p className="section-label">/ Consulting &amp; delivery</p><h2>From challenge<br />to reliable system.</h2><p>We help teams clarify complex technology decisions, shape the right approach, and deliver dependable systems that create measurable operational value.</p></div>
         <div className="service-list">
-          {services.map(({ number, icon: Icon, title, text, tags }) => <article className={`service-row${number === "01" ? " service-row-primary" : ""}`} key={title}><span className="service-number">{number}</span><span className="service-icon"><Icon size={24} strokeWidth={1.5} /></span><div><h3>{title}</h3><p>{text}</p></div><ul>{tags.map((tag) => <li key={tag}>{tag}</li>)}</ul></article>)}
+          {services.map(({ number, primary, icon: Icon, title, text, tags }) => <article className={`service-row${primary ? " service-row-primary" : ""}`} key={title}><span className="service-number">{number}</span><span className="service-icon"><Icon size={24} strokeWidth={1.5} /></span><div><h3>{title}</h3><p>{text}</p></div><ul>{tags.map((tag) => <li key={tag}>{tag}</li>)}</ul></article>)}
         </div>
       </section>
 
