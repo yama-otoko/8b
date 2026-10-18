@@ -35,6 +35,10 @@
 .hero-bottom .round-link{border-color:var(--cyan);background:rgba(99,185,232,.08)}
 .hero-bottom .round-link:hover{background:#214d7d;box-shadow:0 0 40px rgba(99,185,232,.28)}
 
+/* Keep the full location line together on desktop displays. */
+.hero-kicker{gap:32px;width:62%}
+.hero-kicker span:last-child{flex:0 0 auto;white-space:nowrap}
+
 /* Make software consulting the clear lead capability. */
 .service-row-primary{position:relative;background:linear-gradient(90deg,rgba(99,185,232,.12),rgba(88,105,216,.04))}
 .service-row-primary:before{content:'FOCUS';position:absolute;right:18px;top:14px;color:var(--cyan);font:9px ui-monospace,monospace;letter-spacing:.16em}
