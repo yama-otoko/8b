@@ -169,7 +169,7 @@ def back(c):
     c.drawCentredString(PAGE_W / 2, BLEED + 21, "AUTOMATION FOR CRITICAL WORK.")
     c.setFillColor(CYAN)
     c.setFont("Courier", 6.2)
-    c.drawCentredString(PAGE_W / 2, BLEED + 10, "EIGHTBITS.US  /  PRISHTINA - NEW YORK - REMOTE")
+    c.drawCentredString(PAGE_W / 2, BLEED + 10, "EIGHTBITS.US  /  TIRANA - NEW YORK - REMOTE")
     crop_marks(c)
     c.showPage()
 

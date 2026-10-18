@@ -65,7 +65,7 @@ export default function Home() {
 
       <section className="hero shell" id="top">
         <div className="hero-orbit" aria-hidden="true"><span className="orbit orbit-one" /><span className="orbit orbit-two" /><span className="orbit-dot dot-one" /><span className="orbit-dot dot-two" /><span className="orbit-core"><EightbitsMark compact /></span></div>
-        <div className="hero-kicker"><span>Intelligent automation · Software engineering · Digital modernization</span><span>Prishtina · New York · Remote</span></div>
+        <div className="hero-kicker"><span>Intelligent automation · Software engineering · Digital modernization</span><span>Tirana · New York · Remote</span></div>
         <h1>AUTOMATION<br /><em>FOR CRITICAL WORK.</em></h1>
         <div className="hero-bottom"><p>Eightbits helps public-sector and enterprise teams automate complex workflows—combining AI, dependable software, and human oversight.</p><a href="#services" className="round-link" aria-label="Explore our automation capabilities"><ArrowDownRight size={28} /></a></div>
       </section>
