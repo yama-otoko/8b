@@ -48,8 +48,8 @@ function SicaLogo() {
 }
 
 const services = [
-  { number: "01", primary: true, icon: MessagesSquare, title: "Software consulting", text: "We help teams turn complex business and technical challenges into clear, practical software strategies—with senior guidance from discovery through delivery.", tags: ["Technology strategy", "Solution architecture", "Delivery planning"] },
-  { number: "02", icon: Cpu, title: "Intelligent automation", text: "We turn repetitive, high-friction workflows into dependable automated systems—with clear controls, human oversight, and measurable outcomes.", tags: ["Workflow discovery", "Agent systems", "Human oversight"] },
+  { number: "01", primary: true, icon: MessagesSquare, title: "Software consulting", text: "We help teams turn complex business and technical challenges into clear, practical software strategies, with senior guidance from discovery through delivery.", tags: ["Technology strategy", "Solution architecture", "Delivery planning"] },
+  { number: "02", icon: Cpu, title: "Intelligent automation", text: "We turn repetitive, high-friction workflows into dependable automated systems with clear controls, human oversight, and measurable outcomes.", tags: ["Workflow discovery", "Agent systems", "Human oversight"] },
   { number: "03", icon: Braces, title: "Software engineering", text: "We build the platforms, integrations, and internal tools that make automation reliable, secure, and maintainable.", tags: ["Web platforms", "Integrations", "Infrastructure"] },
   { number: "04", icon: Layers3, title: "Digital modernization", text: "We prepare legacy processes and services for automation through practical redesign, accessible interfaces, and sound technical planning.", tags: ["Service design", "Process redesign", "Technical planning"] },
 ];
@@ -67,7 +67,7 @@ export default function Home() {
         <div className="hero-orbit" aria-hidden="true"><span className="orbit orbit-one" /><span className="orbit orbit-two" /><span className="orbit-dot dot-one" /><span className="orbit-dot dot-two" /><span className="orbit-core"><EightbitsMark compact /></span></div>
         <div className="hero-kicker"><span>Intelligent automation · Software engineering · Digital modernization</span><span>Tirana · New York · Remote</span></div>
         <h1>AUTOMATION<br /><em>FOR CRITICAL WORK.</em></h1>
-        <div className="hero-bottom"><p>Eightbits helps public-sector and enterprise teams automate complex workflows—combining AI, dependable software, and human oversight.</p><a href="#services" className="round-link" aria-label="Explore our automation capabilities"><ArrowDownRight size={28} /></a></div>
+        <div className="hero-bottom"><p>Eightbits helps public-sector and enterprise teams automate complex workflows by combining AI, dependable software, and human oversight.</p><a href="#services" className="round-link" aria-label="Explore our automation capabilities"><ArrowDownRight size={28} /></a></div>
       </section>
 
       <div className="marquee" aria-label="Our capabilities"><div>AUTOMATION <i /> AI SYSTEMS <i /> WORKFLOW DESIGN <i /> ENGINEERING <i /> INTEGRATION <i /> AUTOMATION <i /> AI SYSTEMS <i /> WORKFLOW DESIGN <i /> ENGINEERING <i /> INTEGRATION</div></div>
@@ -82,11 +82,11 @@ export default function Home() {
       <section className="products" id="products"><div className="shell">
         <div className="products-heading"><p className="section-label">/ Applied innovation</p><h2>Technology proven<br />through practice.</h2><p>Our own products keep our team close to emerging technology, real operating constraints, and the discipline of shipping usable systems.</p></div>
         <article className="product-card taskwish-card">
-          <div className="product-copy"><div className="product-meta"><span>01 / Developer infrastructure</span><span>OPEN SOURCE</span></div><TaskwishLogo /><h3>The framework for building autonomous companies.</h3><p>Typed actors, tools, state, and AI workflows in TypeScript—designed to be discovered, called, and composed by other agents.</p><a href="https://taskwish.ai" target="_blank" rel="noreferrer">Visit TaskWish <ArrowUpRight size={17} /></a></div>
+          <div className="product-copy"><div className="product-meta"><span>01 / Developer infrastructure</span><span>OPEN SOURCE</span></div><TaskwishLogo /><h3>The framework for building autonomous companies.</h3><p>Typed actors, tools, state, and AI workflows in TypeScript, designed to be discovered, called, and composed by other agents.</p><a href="https://taskwish.ai" target="_blank" rel="noreferrer">Visit TaskWish <ArrowUpRight size={17} /></a></div>
           <div className="taskwish-visual" aria-hidden="true"><div className="code-top"><span /><span /><span /><b>company.ts</b></div><pre><span className="code-cyan-600">Company</span>(<span className="code-green">&quot;studio&quot;</span>, {'{'}{`\n  actors: [\n    `}<span className="code-blue">researcher</span>,{`\n    `}<span className="code-blue">builder</span>,{`\n    `}<span className="code-blue">reviewer</span>,{`\n  ],\n`}{'}'});</pre><div className="flow"><span>Research</span><i>→</i><span>Build</span><i>→</i><span>Review</span></div></div>
         </article>
         <article className="product-card sica-card">
-          <div className="product-copy"><div className="product-meta"><span>02 / Communication infrastructure</span><span>OPEN SOURCE</span></div><SicaLogo /><h3>Matrix messaging, built for the command line.</h3><p>A TypeScript CLI for rooms, messages, replies, read state, and BridgeV2 integrations—speaking directly to the Matrix API and ready for scripts and agents.</p><a href="https://www.npmjs.com/package/sica" target="_blank" rel="noreferrer">View Sica on npm <ArrowUpRight size={17} /></a></div>
+          <div className="product-copy"><div className="product-meta"><span>02 / Communication infrastructure</span><span>OPEN SOURCE</span></div><SicaLogo /><h3>Matrix messaging, built for the command line.</h3><p>A TypeScript CLI for rooms, messages, replies, read state, and BridgeV2 integrations. It speaks directly to the Matrix API and is ready for scripts and agents.</p><a href="https://www.npmjs.com/package/sica" target="_blank" rel="noreferrer">View Sica on npm <ArrowUpRight size={17} /></a></div>
           <div className="sica-visual" aria-hidden="true">
             <div className="terminal-top"><span /><span /><span /><b>SICA // MATRIX CLIENT</b></div>
             <div className="terminal-lines">
@@ -102,7 +102,7 @@ export default function Home() {
         </article>
         <article className="product-card boria-card">
           <div className="boria-visual" aria-hidden="true"><div className="radar-grid" /><span className="drone drone-one">◇</span><span className="drone drone-two">◇</span><span className="drone drone-three">◇</span><div className="radar-status"><span>LIVE MESH</span><b>128</b><small>ACTIVE NODES</small></div><div className="coordinates">NORTH RIDGE / ADRIATIC ARC<br />WIND 12 KT / MESH STABLE</div></div>
-          <div className="product-copy"><div className="product-meta"><span>03 / Autonomous hardware</span><span>EARLY ACCESS</span></div><BoriaLogo /><h3>Autonomous machines that think together.</h3><p>Mountain-born hardware and an open, peer-to-peer protocol for drone swarms that coordinate—even when the network breaks.</p><a href="https://boria.ai" target="_blank" rel="noreferrer">Explore Boria <ArrowUpRight size={17} /></a></div>
+          <div className="product-copy"><div className="product-meta"><span>03 / Autonomous hardware</span><span>EARLY ACCESS</span></div><BoriaLogo /><h3>Autonomous machines that think together.</h3><p>Mountain-born hardware and an open, peer-to-peer protocol for drone swarms that coordinate even when the network breaks.</p><a href="https://boria.ai" target="_blank" rel="noreferrer">Explore Boria <ArrowUpRight size={17} /></a></div>
         </article>
       </div></section>
 
