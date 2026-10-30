@@ -2,6 +2,24 @@
 
 A clean full-stack starter running on [vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and Drizzle support.
 
+## Deploy to Cloudflare Workers
+
+The application is configured for Cloudflare Workers in `wrangler.jsonc`. The
+production Worker is named `eightbits-us` and serves `eightbits.us` and
+`www.eightbits.us` through Worker Routes.
+
+Authenticate once, then build and deploy:
+
+```sh
+npx wrangler login
+npm run deploy
+```
+
+For Cloudflare Workers Builds, use `npm run deploy` as the deploy command. The
+build generates the deployment manifest under `dist/server/`, and Wrangler
+automatically uses that generated manifest. The existing proxied DNS records
+remain as a rollback origin; requests are intercepted by the Worker Routes.
+
 ## Prerequisites
 
 - Node.js `>=22.13.0`

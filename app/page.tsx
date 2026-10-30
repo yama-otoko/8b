@@ -47,6 +47,14 @@ function SicaLogo() {
   );
 }
 
+function FlyFlyLogo() {
+  return (
+    <div className="flyfly-logo" aria-label="Fly Fly">
+      <span>FLY</span><i aria-hidden="true" /><span>FLY</span>
+    </div>
+  );
+}
+
 const services = [
   { number: "01", primary: true, icon: MessagesSquare, title: "Software consulting", text: "We help teams turn complex business and technical challenges into clear, practical software strategies, with senior guidance from discovery through delivery.", tags: ["Technology strategy", "Solution architecture", "Delivery planning"] },
   { number: "02", icon: Cpu, title: "Intelligent automation", text: "We turn repetitive, high-friction workflows into dependable automated systems with clear controls, human oversight, and measurable outcomes.", tags: ["Workflow discovery", "Agent systems", "Human oversight"] },
@@ -103,6 +111,16 @@ export default function Home() {
         <article className="product-card boria-card">
           <div className="boria-visual" aria-hidden="true"><div className="radar-grid" /><span className="drone drone-one">◇</span><span className="drone drone-two">◇</span><span className="drone drone-three">◇</span><div className="radar-status"><span>LIVE MESH</span><b>128</b><small>ACTIVE NODES</small></div><div className="coordinates">NORTH RIDGE / ADRIATIC ARC<br />WIND 12 KT / MESH STABLE</div></div>
           <div className="product-copy"><div className="product-meta"><span>03 / Autonomous hardware</span><span>EARLY ACCESS</span></div><BoriaLogo /><h3>Autonomous machines that think together.</h3><p>Mountain-born hardware and an open, peer-to-peer protocol for drone swarms that coordinate even when the network breaks.</p><a href="https://boria.ai" target="_blank" rel="noreferrer">Explore Boria <ArrowUpRight size={17} /></a></div>
+        </article>
+        <article className="product-card flyfly-card">
+          <div className="product-copy"><div className="product-meta"><span>04 / Business travel</span><span>PRIVATE SERVICE</span></div><FlyFlyLogo /><h3>Business class, beautifully arranged.</h3><p>A private travel advisor for business-class flights, considered stays, airport transfers, and live support from Prishtina to the world.</p><a href="https://flyfly.biz" target="_blank" rel="noreferrer">Visit Fly Fly <ArrowUpRight size={17} /></a></div>
+          <div className="flyfly-visual" aria-hidden="true">
+            <div className="flight-board-top"><span>FLY FLY / BUSINESS NETWORK</span><span>FROM PRISHTINA</span></div>
+            <div className="departure"><small>YOUR DEPARTURE</small><strong>PRN</strong><span>Prishtina, Kosovo</span></div>
+            <div className="route-line"><i /><b>✦</b><i /></div>
+            <div className="destinations"><span>BCN</span><span>MXP</span><span>MUC</span><span>VIE</span><span>CDG</span><span>NYC</span></div>
+            <div className="flight-services"><span>BUSINESS CLASS</span><span>PRIVATE TRANSFERS</span><span>LIVE SUPPORT</span></div>
+          </div>
         </article>
       </div></section>
 

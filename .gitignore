@@ -38,6 +38,9 @@ yarn-error.log*
 next-env.d.ts
 /dist/
 /.wrangler/
+# Local Cloudflare secrets
+.dev.vars*
+!.dev.vars.example
 # Checkout-local execution profile and tool state; never publish them.
 /.sites-runtime/
 /.agents/
