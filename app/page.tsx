@@ -1,4 +1,5 @@
 import { ArrowDownRight, ArrowUpRight, Braces, Cpu, Layers3, MessagesSquare } from "lucide-react";
+import { BoriaOnlineCount } from "@/components/boria-online-count";
 
 function EightbitsMark({ compact = false }: { compact?: boolean }) {
   return (
@@ -109,7 +110,7 @@ export default function Home() {
           </div>
         </article>
         <article className="product-card boria-card">
-          <div className="boria-visual" aria-hidden="true"><div className="radar-grid" /><span className="drone drone-one">◇</span><span className="drone drone-two">◇</span><span className="drone drone-three">◇</span><div className="radar-status"><span>LIVE MESH</span><b>128</b><small>ACTIVE NODES</small></div><div className="coordinates">NORTH RIDGE / ADRIATIC ARC<br />WIND 12 KT / MESH STABLE</div></div>
+          <div className="boria-visual"><div className="radar-grid" aria-hidden="true" /><span className="drone drone-one" aria-hidden="true">◇</span><span className="drone drone-two" aria-hidden="true">◇</span><span className="drone drone-three" aria-hidden="true">◇</span><BoriaOnlineCount /><div className="coordinates" aria-hidden="true">NORTH RIDGE / ADRIATIC ARC<br />WIND 12 KT / MESH STABLE</div></div>
           <div className="product-copy"><div className="product-meta"><span>03 / Autonomous hardware</span><span>EARLY ACCESS</span></div><BoriaLogo /><h3>Autonomous machines that think together.</h3><p>Mountain-born hardware and an open, peer-to-peer protocol for drone swarms that coordinate even when the network breaks.</p><a href="https://boria.ai" target="_blank" rel="noreferrer">Explore Boria <ArrowUpRight size={17} /></a></div>
         </article>
         <article className="product-card flyfly-card">
