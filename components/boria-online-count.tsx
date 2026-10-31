@@ -8,7 +8,19 @@ type PresenceResponse = {
 };
 
 const REFRESH_INTERVAL_MS = 30_000;
+const RECONNECT_DELAY_MS = 3_000;
 const PRESENCE_URL = process.env.NEXT_PUBLIC_BORIA_PRESENCE_URL;
+
+function presenceSocketUrl(endpoint: string): string {
+  const url = new URL(endpoint);
+  if (url.protocol === "https:") url.protocol = "wss:";
+  else if (url.protocol === "http:") url.protocol = "ws:";
+  else throw new Error("Presence endpoint must use HTTP or HTTPS");
+  url.pathname = `${url.pathname.replace(/\/$/, "")}/connect`;
+  url.search = "";
+  url.hash = "";
+  return url.toString();
+}
 
 export function BoriaOnlineCount() {
   const [online, setOnline] = useState<number | null>(null);
@@ -16,6 +28,8 @@ export function BoriaOnlineCount() {
 
   useEffect(() => {
     let active = true;
+    let socket: WebSocket | undefined;
+    let reconnectTimer: number | undefined;
 
     async function refresh() {
       try {
@@ -40,12 +54,39 @@ export function BoriaOnlineCount() {
       }
     }
 
-    void refresh();
+    function connect() {
+      if (!active || !PRESENCE_URL) {
+        setStatus("unavailable");
+        return;
+      }
+
+      try {
+        socket = new WebSocket(presenceSocketUrl(PRESENCE_URL));
+      } catch {
+        setStatus("unavailable");
+        return;
+      }
+
+      socket.addEventListener("open", () => void refresh());
+      socket.addEventListener("error", () => {
+        if (active) setStatus("unavailable");
+      });
+      socket.addEventListener("close", () => {
+        if (!active) return;
+        setOnline(null);
+        setStatus("unavailable");
+        reconnectTimer = window.setTimeout(connect, RECONNECT_DELAY_MS);
+      });
+    }
+
+    connect();
     const interval = window.setInterval(refresh, REFRESH_INTERVAL_MS);
 
     return () => {
       active = false;
       window.clearInterval(interval);
+      if (reconnectTimer !== undefined) window.clearTimeout(reconnectTimer);
+      socket?.close(1000, "page closed");
     };
   }, []);
 
