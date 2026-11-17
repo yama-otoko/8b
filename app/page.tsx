@@ -68,7 +68,7 @@ export default function Home() {
     <main>
       <header className="site-header shell">
         <a className="logo-link" href="#top" aria-label="Eightbits home"><EightbitsMark /></a>
-        <nav aria-label="Main navigation"><a href="#services">Services</a><a href="#products">Products</a><a href="#approach">Approach</a></nav>
+        <nav aria-label="Main navigation"><a href="#services">Services</a><a href="#products">Products</a><a href="#approach">Approach</a><a href="#careers">Careers</a></nav>
         <a className="header-cta" href="mailto:hello@eightbits.us">Let&apos;s talk <ArrowUpRight size={16} /></a>
       </header>
 
@@ -126,6 +126,22 @@ export default function Home() {
       </div></section>
 
       <section className="studio shell" id="approach"><p className="section-label">/ How we work</p><div className="studio-grid"><h2>Automation with<br />accountability.</h2><div><p>Eightbits combines workflow analysis, product judgment, and engineering depth in one accountable team.</p><p>We start with the work itself, automate where it creates clear value, and keep people in control of consequential decisions.</p></div><div className="studio-principles"><span><b>01</b>Start with the workflow</span><span><b>02</b>Design for human control</span><span><b>03</b>Measure operational value</span></div></div></section>
+
+      <section className="careers shell" id="careers" aria-labelledby="careers-title">
+        <div className="careers-intro">
+          <p className="section-label">/ Careers</p>
+          <h2 id="careers-title">Build what<br /><em>comes next.</em></h2>
+          <p>Bring your curiosity, craft, and care for how technology works in the real world. Help us turn complex challenges into dependable systems.</p>
+          <ul className="careers-fields" aria-label="Areas of work"><li>Engineering</li><li>AI &amp; automation</li><li>Product &amp; design</li></ul>
+        </div>
+        <div className="careers-invitation">
+          <span className="careers-kicker">Start a conversation</span>
+          <h3>Good work starts<br />with good people.</h3>
+          <p>Interested in working with Eightbits? Tell us what you do, what you care about, and what you&apos;d like to build. Share your CV, portfolio, or a project you&apos;re proud of.</p>
+          <a href="mailto:hello@eightbits.us?subject=Careers%20at%20Eightbits">Introduce yourself <ArrowUpRight size={20} aria-hidden="true" /></a>
+          <span className="careers-email">hello@eightbits.us</span>
+        </div>
+      </section>
 
       <section className="contact shell"><div><p className="section-label">/ Start a conversation</p><h2>TELL US THE<br /><em>MISSION.</em></h2></div><a href="mailto:hello@eightbits.us" className="contact-link">hello@eightbits.us <ArrowUpRight size={30} /></a></section>
       <footer className="shell"><EightbitsMark /><p>Intelligent automation for critical work.</p><div><a href="https://www.linkedin.com/company/eight-8-bits/" target="_blank" rel="noreferrer">LinkedIn</a><a href="#top">Back to top ↑</a></div></footer>
