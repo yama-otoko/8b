@@ -91,8 +91,18 @@ export default function Home() {
       <section className="products" id="products"><div className="shell">
         <div className="products-heading"><p className="section-label">/ Applied innovation</p><h2>Technology proven<br />through practice.</h2><p>Our own products keep our team close to emerging technology, real operating constraints, and the discipline of shipping usable systems.</p></div>
         <article className="product-card taskwish-card">
-          <div className="product-copy"><div className="product-meta"><span>01 / Developer infrastructure</span><span>OPEN SOURCE</span></div><TaskwishLogo /><h3>The framework for building autonomous companies.</h3><p>Typed actors, tools, state, and AI workflows in TypeScript, designed to be discovered, called, and composed by other agents.</p><a href="https://taskwish.ai" target="_blank" rel="noreferrer">Visit TaskWish <ArrowUpRight size={17} /></a></div>
-          <div className="taskwish-visual" aria-hidden="true"><div className="code-top"><span /><span /><span /><b>company.ts</b></div><pre><span className="code-cyan-600">Company</span>(<span className="code-green">&quot;studio&quot;</span>, {'{'}{`\n  actors: [\n    `}<span className="code-blue">researcher</span>,{`\n    `}<span className="code-blue">builder</span>,{`\n    `}<span className="code-blue">reviewer</span>,{`\n  ],\n`}{'}'});</pre><div className="flow"><span>Research</span><i>→</i><span>Build</span><i>→</i><span>Review</span></div></div>
+          <div className="product-copy"><div className="product-meta"><span>01 / Visual automation</span><span>LOW-CODE PLATFORM</span></div><TaskwishLogo /><h3>Build your autonomous company visually.</h3><p>Bring agents, tools, and business processes together on one visual canvas. Build and manage workflows with low-code tools, then run them in TaskWish Cloud or on your own infrastructure.</p><a href="https://taskwish.ai" target="_blank" rel="noreferrer">Explore TaskWish <ArrowUpRight size={17} /></a></div>
+          <div className="taskwish-visual" aria-hidden="true">
+            <div className="code-top"><span /><span /><span /><b>WORKFLOW CANVAS</b></div>
+            <div className="taskwish-workflow">
+              <div className="taskwish-node"><span>01 / TRIGGER</span><strong>New request</strong><small>Start when work arrives</small></div>
+              <i className="taskwish-connector">↓</i>
+              <div className="taskwish-node taskwish-node-agent"><span>02 / AGENT</span><strong>Understand &amp; act</strong><small>Connect intelligence to your tools</small></div>
+              <i className="taskwish-connector">↓</i>
+              <div className="taskwish-node"><span>03 / ACTION</span><strong>Keep tools in sync</strong><small>Move the process forward</small></div>
+            </div>
+            <div className="taskwish-runtime"><span>TaskWish Cloud</span><i>or</i><span>Your infrastructure</span></div>
+          </div>
         </article>
         <article className="product-card sica-card">
           <div className="product-copy"><div className="product-meta"><span>02 / Communication infrastructure</span><span>OPEN SOURCE</span></div><SicaLogo /><h3>Matrix messaging, built for the command line.</h3><p>A TypeScript CLI for rooms, messages, replies, read state, and BridgeV2 integrations. It speaks directly to the Matrix API and is ready for scripts and agents.</p><a href="https://www.npmjs.com/package/sica" target="_blank" rel="noreferrer">View Sica on npm <ArrowUpRight size={17} /></a></div>
